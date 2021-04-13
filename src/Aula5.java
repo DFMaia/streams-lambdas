@@ -21,12 +21,14 @@ public class Aula5 {
          * O n1 será o primeiro elemento e o n2 o segundo. A soma deles será um resultado e o n1 passará a ser
          * o resultado somado. O n2 será então o terceiro elemento. Eles serão somados e assim por diante.
          */
-        Optional<Integer> reduceSoma = list.stream().reduce((n1, n2) -> n1 + n2);
+        Optional<Integer> reduceSoma = list.stream()
+                .reduce((n1, n2) -> n1 + n2);
         System.out.println("Somando todos os valores de dentro de uma lista.");
         System.out.println(reduceSoma.get());
 
         System.out.println("\nMultiplicação de todos os valores de dentro de uma lista");
-        Optional<Integer> reduceMultiplicacao = list.stream().reduce((n1, n2) -> n1 * n2);
+        Optional<Integer> reduceMultiplicacao = list.stream()
+                .reduce((n1, n2) -> n1 * n2);
         System.out.println(reduceMultiplicacao.get());
 
         /**
